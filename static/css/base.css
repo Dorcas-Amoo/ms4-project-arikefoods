@@ -21,6 +21,14 @@ main {
     flex: 1 0 auto;
 }
 
+.navbar-brand {
+    font-size: 40px !important;
+}
+
+.welcome {
+   margin-top: 3em;
+}
+
 .food-menu-button,
 .place-order-button {
     background-color: #333;
@@ -34,6 +42,5 @@ main {
 }
 
 .footer-copyright {
-    height: 5em;
-    margin-top: 9em;
+    height: 3em;
 }
