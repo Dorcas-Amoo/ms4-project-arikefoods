@@ -3,10 +3,13 @@ from .models import Menu
 
 # Create your views here.
 
-def menu(request):
-    menu = Menu.objects.all()
-    context = {
-        'menus': menu
-    }
-    return render(request, 'menu/food_menu.html', context)
 
+def all_menus(request):
+
+    menus = Menu.objects.all()
+
+    context = {
+        'menus': menus,
+    }
+
+    return render(request, 'menu/food_menu.html', context)
