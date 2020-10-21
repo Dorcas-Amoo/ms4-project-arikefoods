@@ -14,36 +14,93 @@
 <h1>Test</h1>
 <h1>Test</h1>
 </div>
-<div class="container">
+
+<section class="container">
     <div class="row">
-        <div class="col-md-6 menu-column">
+        <div class="col-12 offset 1 offset-xs-0 offset-sm-0 col-xs-6 col-sm-6 col-md-6 menu-column">
             <h4 class="menu-category" id="rice_dish">
                 Rice Dish
             </h4>
         </div>
     </div>
-    <hr>
+    
+    <form class="col-6" method="POST" action="">
+        <div class="row">
+            <div class="col-6">
+                Jollof
+            </div>
+            <div class="col-4">
+                £7
+            </div>
+            <div class="col-2">
+                <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-6">
+                Fried Rice
+            </div>
+            <div class="col-4">
+                £8
+            </div>
+            <div class="col-2">
+                <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-6">
+                Rice & Peas
+            </div>
+            <div class="col-4">
+                £10
+            </div>
+            <div class="col-2">
+                <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-6">
+                White Rice
+            </div>
+            <div class="col-4">
+                £5
+            </div>
+            <div class="col-2">
+                <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+    </form>
+</section>
+
+<section class="container">
     <div class="row">
-        <div class="col-sm-4 col-md-4 col-lg-4 menu-column">
+        <div class="col-12 offset 1 offset-xs-0 offset-sm-0 col-xs-6 col-sm-6 col-md-6 menu-column">
             <h4 class="menu-category" id="soup">
                 Soup
             </h4>
         </div>
     </div>
-</div>
+    <form class="col-6" method="POST" action="">
+
+    </form>
+
+</section>
 
 <div class="container">
     <div class="row">
-        <div class="col-md-6 cart-column">
-            <div class="card border-warning w-40">
-                <div class="card-body">
-                    <h4 class="card-title"></h4>
-                </div>
+        <div class="card col-6 cart border-warning">
+            <h5 class="card-header"><i class="fas fa-shopping-cart"></i>  Your Order</h5>
+            <div class="card-body">
+                <div class="panel-body"><span>There are no items in your cart.</span></div>
             </div>
         </div>
     </div>
 </div>
+
 <div class="container">
-    <a href="#" class="checkout-button btn btn-md rounded-pill text-uppercase py-3 bg-warning">Checkout</a>
+    <a href="#" class="checkout-button btn btn-md rounded-pill text-uppercase py-2 bg-warning">Checkout</a>
 </div>
 {% endblock %}
