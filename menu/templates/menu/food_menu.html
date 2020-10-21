@@ -9,22 +9,40 @@
     </div>
 {% endblock %}
 
-
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <table class="table table-hover table-dark">
-                    {% for menu in menus %}
+<div>
+<h1>Test</h1>
+<h1>Test</h1>
+</div>
+<div class="my-5">
+    <h4 class="text-center">
+        <a href="" class="place-order-button btn btn-lg rounded-pill text-uppercase py-3">Place an Order</a>
+    </h4>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table table-hover table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                {% for menu in menus %}
+                    <tbody>
                         <tr>
                             <td>{{ menu.name}}</td>
                             <td>{{ menu.description}}</td>
-                            <td>{{ menu.category}}</td>
+                            <td>{{ menu.category.friendly_name}}</td>
                             <td>£{{ menu.price}}</td>
                         </tr>
-                    {% endfor %}
-                </table>
-            </div>
+                    </tbody>
+                {% endfor %}
+            </table>
         </div>
     </div>
+</div>
 {% endblock %}
