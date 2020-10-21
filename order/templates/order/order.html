@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div>
+<h1>Test</h1>
+<h1>Test</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 menu-column">
+            <h4 class="menu-category" id="rice_dish">
+                Rice Dish
+            </h4>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4 menu-column">
+            <h4 class="menu-category" id="soup">
+                Soup
+            </h4>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 cart-column">
+            <div class="card border-warning w-40">
+                <div class="card-body">
+                    <h4 class="card-title"></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <a href="#" class="checkout-button btn btn-md rounded-pill text-uppercase py-3 bg-warning">Checkout</a>
+</div>
+{% endblock %}
