@@ -10,141 +10,67 @@
 {% endblock %}
 
 {% block content %}
-<div>
-<h1>Test</h1>
-<h1>Test</h1>
-</div>
 
-<div class="container w-50 position-absolute mx-5">
-    <div class="card row border-warning">
-        <div class="col-12 menu-column">
-            <h4 class="menu-category text-center" id="rice_dish">
-                Rice Dish
-            </h4>
-        </div>
+<div class="card w-50 my-3">
+    <div class="card-header">
+        <strong>Rice Dish</strong>
+    </div>
+    <div class="card-body">
         <form class="col-12" method="POST" action="">
-            <div class="row">
-                <div class="col-6">
-                    Jollof
+            {% csrf_token %}
+            {% for menu in menus %}
+                <div class="row">
+                    <div class="col-6">
+                        {{ menu.name}}
+                    </div>
+                    <div class="col-4">
+                        {{ menu.price}}
+                    </div>
                 </div>
-                <div class="col-4">
-                    £7
-                </div>
-                <div class="col-2">
-                    <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
-                </div>
+            {% endfor %}
+            <div class="col-2">
+                <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
             </div>
             <hr>
-            <div class="row">
-                <div class="col-6">
-                    Fried Rice
-                </div>
-                <div class="col-4">
-                    £8
-                </div>
-                <div class="col-2">
-                    <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col-6">
-                    Rice & Peas
-                </div>
-                <div class="col-4">
-                    £10
-                </div>
-                <div class="col-2">
-                    <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col-6">
-                    White Rice
-                </div>
-                <div class="col-4">
-                    £5
-                </div>
-                <div class="col-2">
-                    <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
-                </div>
-            </div>
-        </form>
-        <hr>
-
-        <div class="col-12 menu-column">
-            <h4 class="menu-category text-center" id="soup">
-                Soup
-            </h4>
-        </div>
-        <form class="col-12" method="POST" action="">
-            <div class="row">
-                <div class="col-6">
-                    Efo
-                </div>
-                <div class="col-4">
-                    £8
-                </div>
-                <div class="col-2">
-                    <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col-6">
-                    Ayamase
-                </div>
-                <div class="col-4">
-                    £10
-                </div>
-                <div class="col-2">
-                    <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col-6">
-                    Meat Stew
-                </div>
-                <div class="col-4">
-                    £5
-                </div>
-                <div class="col-2">
-                    <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col-6">
-                    Fish Stew
-                </div>
-                <div class="col-4">
-                    £5
-                </div>
-                <div class="col-2">
-                    <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
-                </div>
-            </div>
-            <br>
         </form>
     </div>
 </div>
 
-<div class="container d-flex justify-content-end">
-    <div class="row">
-        <div class="card col-6 cart border-warning">
-            <h5 class="card-header"><i class="fas fa-shopping-cart"></i>  Your Order</h5>
-            <div class="card-body">
-                <div class="panel-body"><span>There are no items in your cart.</span></div>
+<div class="card w-50 my-3">
+    <div class="card-header">
+    <strong>Soup</strong>
+    </div>
+    <div class="card-body">
+        <form class="col-12" method="POST" action="">
+             {% csrf_token %}
+            {% for menu in menus %}
+                <div class="row">
+                    <div class="col-6">
+                        {{ menu.name}}
+                    </div>
+                    <div class="col-4">
+                        {{ menu.price}}
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="col-2">
+                <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
             </div>
-            <div>
-                <a href="#" class="checkout-button btn btn-md rounded-pill text-uppercase py-2 bg-warning">Checkout</a>
-            </div>
-            <br>
-        </div>
+            <hr>
+        </form>
     </div>
 </div>
 
-
+<div class="card cart-card w-50 my-3">
+    <div class="card-header">
+        <h5><i class="fas fa-shopping-cart"></i> <strong>Your Order</strong></h5>
+    </div>
+    <div class="card-body">
+        <div class="panel-body"><span>There are no items in your cart.</span></div>
+    </div>
+    <div class="text-center">
+        <a href="#" class="checkout-button btn btn-md rounded-pill text-uppercase bg-warning">Checkout</a>
+    </div>
+    <br>
+</div>
 {% endblock %}
