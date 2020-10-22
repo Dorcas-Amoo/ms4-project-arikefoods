@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    background: url('/media/bg-marble.jpg') no-repeat;
+    background: url('/media/bg-marble.jpg') no-repeat fixed;
     background-size: cover;
 	color: #333;
 	font-family: 'open sans', sans-serif;
@@ -17,6 +17,10 @@ body {
     min-height: 100vh;
     flex-direction: column;
     overflow-x: hidden;
+}
+
+section {
+    margin-top: 90px;
 }
 
 main {
@@ -44,6 +48,10 @@ main {
    font-size: 15px!important;
    border-radius: 20px 20px;
    color: #ebb129!important;
+}
+
+.card {
+    margin: 0 auto;
 }
 
 /* -----------------------------Navbar (Credits: Bootstrap & Code Institute)*/
