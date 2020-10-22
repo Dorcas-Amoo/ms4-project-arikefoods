@@ -15,92 +15,136 @@
 <h1>Test</h1>
 </div>
 
-<section class="container">
-    <div class="row">
-        <div class="col-12 offset 1 offset-xs-0 offset-sm-0 col-xs-6 col-sm-6 col-md-6 menu-column">
-            <h4 class="menu-category" id="rice_dish">
+<div class="container w-50 position-absolute mx-5">
+    <div class="card row border-warning">
+        <div class="col-12 menu-column">
+            <h4 class="menu-category text-center" id="rice_dish">
                 Rice Dish
             </h4>
         </div>
-    </div>
-    
-    <form class="col-6" method="POST" action="">
-        <div class="row">
-            <div class="col-6">
-                Jollof
+        <form class="col-12" method="POST" action="">
+            <div class="row">
+                <div class="col-6">
+                    Jollof
+                </div>
+                <div class="col-4">
+                    £7
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
+                </div>
             </div>
-            <div class="col-4">
-                £7
+            <hr>
+            <div class="row">
+                <div class="col-6">
+                    Fried Rice
+                </div>
+                <div class="col-4">
+                    £8
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
+                </div>
             </div>
-            <div class="col-2">
-                <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
+            <hr>
+            <div class="row">
+                <div class="col-6">
+                    Rice & Peas
+                </div>
+                <div class="col-4">
+                    £10
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
+                </div>
             </div>
-        </div>
+            <hr>
+            <div class="row">
+                <div class="col-6">
+                    White Rice
+                </div>
+                <div class="col-4">
+                    £5
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+        </form>
         <hr>
-        <div class="row">
-            <div class="col-6">
-                Fried Rice
-            </div>
-            <div class="col-4">
-                £8
-            </div>
-            <div class="col-2">
-                <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-6">
-                Rice & Peas
-            </div>
-            <div class="col-4">
-                £10
-            </div>
-            <div class="col-2">
-                <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-6">
-                White Rice
-            </div>
-            <div class="col-4">
-                £5
-            </div>
-            <div class="col-2">
-                <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
-            </div>
-        </div>
-    </form>
-</section>
 
-<section class="container">
-    <div class="row">
-        <div class="col-12 offset 1 offset-xs-0 offset-sm-0 col-xs-6 col-sm-6 col-md-6 menu-column">
-            <h4 class="menu-category" id="soup">
+        <div class="col-12 menu-column">
+            <h4 class="menu-category text-center" id="soup">
                 Soup
             </h4>
         </div>
+        <form class="col-12" method="POST" action="">
+            <div class="row">
+                <div class="col-6">
+                    Efo
+                </div>
+                <div class="col-4">
+                    £8
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-6">
+                    Ayamase
+                </div>
+                <div class="col-4">
+                    £10
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-6">
+                    Meat Stew
+                </div>
+                <div class="col-4">
+                    £5
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-6">
+                    Fish Stew
+                </div>
+                <div class="col-4">
+                    £5
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <br>
+        </form>
     </div>
-    <form class="col-6" method="POST" action="">
+</div>
 
-    </form>
-
-</section>
-
-<div class="container">
+<div class="container d-flex justify-content-end">
     <div class="row">
         <div class="card col-6 cart border-warning">
             <h5 class="card-header"><i class="fas fa-shopping-cart"></i>  Your Order</h5>
             <div class="card-body">
                 <div class="panel-body"><span>There are no items in your cart.</span></div>
             </div>
+            <div>
+                <a href="#" class="checkout-button btn btn-md rounded-pill text-uppercase py-2 bg-warning">Checkout</a>
+            </div>
+            <br>
         </div>
     </div>
 </div>
 
-<div class="container">
-    <a href="#" class="checkout-button btn btn-md rounded-pill text-uppercase py-2 bg-warning">Checkout</a>
-</div>
+
 {% endblock %}
