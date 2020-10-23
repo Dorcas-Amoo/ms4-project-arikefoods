@@ -5,5 +5,5 @@ from .models import Order
 
 def order(request):
     """ A view to return the order page """
-    
-    return render(request, 'order/order.html')
+
+    return render(request, 'order/order.html', context)
