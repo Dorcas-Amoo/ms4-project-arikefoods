@@ -1,7 +1,6 @@
-from django.contrib import admin
 from django.urls import path
 from . import views
 
 urlpatterns = [
-   path('order/', views.order, name='order'),
+   path('order_cart/', views.cart, name='order'),
 ]
