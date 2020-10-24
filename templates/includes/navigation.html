@@ -20,7 +20,7 @@
                 <a class="nav-link" href="{% url 'contact_us' %}"> <i class="fas fa-phone"></i> Contact Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'order' %}"> <i class="fas fa-shopping-cart"></i> Cart</a>
+                <a class="nav-link" href="{% url 'view_order' %}"> <i class="fas fa-shopping-cart"></i> Cart</a>
             </li>
             {% if user.is_authenticated %}
                 <li class="nav-item dropdown">

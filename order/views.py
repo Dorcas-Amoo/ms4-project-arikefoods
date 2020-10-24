@@ -1,10 +1,9 @@
 from django.shortcuts import render
-from .models import Order
 
 # Create your views here.
 
 
-def cart(request):
+def view_order(request):
     """ A view to return the order_cart page """
 
     return render(request, 'order/order.html')
