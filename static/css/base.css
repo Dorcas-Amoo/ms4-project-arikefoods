@@ -31,13 +31,17 @@ section {
 }
 
 .food-menu-button,
-.place-order-button {
+.place-order-button,
+.checkout-button,
+.back-button {
     background-color: #333;
 	color: #ebb129!important;
 }
 
 .food-menu-button:hover,
-.place-order-button:hover {
+.place-order-button:hover,
+.checkout-button:hover,
+.back-button:hover {
 	background-color: #333;
 	color: #fff!important;
 }
