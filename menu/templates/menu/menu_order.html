@@ -11,52 +11,37 @@
 
 {% block content %}
 
+<div class="my-5">
+     <h4 class="text-center">
+        <a href="{% url 'menu' %}" class="food-menu-button btn btn-lg rounded-pill text-uppercase py-3">Food Menu</a>
+    </h4>
+</div>
+
 <div class="card w-50 my-3">
     <div class="card-header">
-        <strong>Rice Dish</strong>
+        <strong>Order a Meal</strong>
     </div>
     <div class="card-body">
         <form class="col-12" method="POST" action="">
             {% csrf_token %}
             {% for menu in menus %}
                 <div class="row">
-                    <div class="col-6">
-                        {{ menu.name}}
+                    <div class="col-6" id="{{ menu.id }}">
+                        {{ menu.name }}
                     </div>
                     <div class="col-4">
-                        {{ menu.price}}
+                       £{{ menu.price }}
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
                     </div>
                 </div>
-            {% endfor %}
-            <div class="col-2">
-                <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
-            </div>
-            <hr>
-        </form>
-    </div>
-</div>
-
-<div class="card w-50 my-3">
-    <div class="card-header">
-    <strong>Soup</strong>
-    </div>
-    <div class="card-body">
-        <form class="col-12" method="POST" action="">
-             {% csrf_token %}
-            {% for menu in menus %}
-                <div class="row">
-                    <div class="col-6">
-                        {{ menu.name}}
-                    </div>
-                    <div class="col-4">
-                        {{ menu.price}}
-                    </div>
+                
+                <div class="col-3 col-sm-2 col-md-4 col-lg-3 col-xl-3">
+                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="100" data-item_id="{{ menu.id }}" id="id_qty_{{ menu.id }}">
                 </div>
+                <hr>
             {% endfor %}
-            <div class="col-2">
-                <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
-            </div>
-            <hr>
         </form>
     </div>
 </div>
