@@ -16,12 +16,16 @@
         <h5><i class="fas fa-shopping-cart"></i> <strong>Your Order</strong></h5>
     </div>
     <div class="card-body">
-        <div class="panel-body"><span>There are no items in your cart.</span></div>
+        {% if cart_items %}
+            <div class="table-responsive"></div>
+        {% else %}
+            <div class="panel-body"><span>There are no items in your cart.</span></div>
+        {% endif %}
     </div>
 </div>
 <div class="my-5">
     <h4 class="text-center">
-        <a href="{% url 'menu_order' %}" class="back-button btn btn-lg rounded-pill text-uppercase py-3">Back</a>
+        <a href="{% url 'menu_order' %}" class="place-order-button btn btn-lg border-warning rounded-pill text-uppercase py-3">Place an Order</a>
         <a href="{% url 'menu' %}" class="checkout-button btn btn-lg rounded-pill text-uppercase py-3">Checkout</a>
     </h4>
 </div>
