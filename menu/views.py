@@ -4,7 +4,7 @@ from .models import Menu
 # Create your views here.
 
 
-def all_menus(request):
+def view_all_menus(request):
 
     menus = Menu.objects.all()
 
