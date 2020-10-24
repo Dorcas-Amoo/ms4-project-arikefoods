@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="card w-50 my-3">
+    <div class="card-header">
+        <strong>Rice Dish</strong>
+    </div>
+    <div class="card-body">
+        <form class="col-12" method="POST" action="">
+            {% csrf_token %}
+            {% for menu in menus %}
+                <div class="row">
+                    <div class="col-6">
+                        {{ menu.name}}
+                    </div>
+                    <div class="col-4">
+                        {{ menu.price}}
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="col-2">
+                <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
+            </div>
+            <hr>
+        </form>
+    </div>
+</div>
+
+<div class="card w-50 my-3">
+    <div class="card-header">
+    <strong>Soup</strong>
+    </div>
+    <div class="card-body">
+        <form class="col-12" method="POST" action="">
+             {% csrf_token %}
+            {% for menu in menus %}
+                <div class="row">
+                    <div class="col-6">
+                        {{ menu.name}}
+                    </div>
+                    <div class="col-4">
+                        {{ menu.price}}
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="col-2">
+                <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
+            </div>
+            <hr>
+        </form>
+    </div>
+</div>
+{% endblock %}
