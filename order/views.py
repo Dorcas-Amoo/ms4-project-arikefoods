@@ -10,17 +10,17 @@ def view_order(request):
 
 
 def add_to_cart(request, item_id):
-    """ A view to add item's quantity to the order_cart """
+    """ A view to add items quantity to the order_cart """
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    cart = request.session.get('cart', {})
+    cart = request.session.get('order', {})
 
     if item_id in list(cart.keys()):
         cart[item_id] += quantity
     else:
         cart[item_id] = quantity
 
-    request.session['cart'] = cart
-    print(request.session['cart'])
+    request.session['order'] = cart
+    print(request.session['order'])
     return redirect(redirect_url)

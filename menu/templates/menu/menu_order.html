@@ -22,16 +22,16 @@
         <strong>Order Your Meal</strong>
     </div>
     <div class="card-body">
-     
-        <form class="form" method="POST" action="">
-            {% csrf_token %}
-            {% for menu in menus %}
+        {% for menu in menus %}
+            <form class="form" method="POST" action="{% url 'add_to_cart' menu.id %}">
+                {% csrf_token %}
+                
                 <div class="row">
                     <div class="col-6" id="{{ menu.id }}">
                         {{ menu.name }}
                     </div>
                     <div class="col-3">
-                       £{{ menu.price }}
+                    £{{ menu.price }}
                     </div>
                     <div class="col-3">
                         <input class="btn btn-warning" type="submit" value="Add to Cart">
@@ -42,8 +42,8 @@
                 </div>
                 <hr>
                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
-            {% endfor %}
-        </form>
+            </form>
+        {% endfor %} 
     </div>
 </div>
 {% endblock %}
