@@ -22,25 +22,26 @@
         <strong>Order Your Meal</strong>
     </div>
     <div class="card-body">
-        <form class="col-12" method="POST" action="">
+     
+        <form class="form" method="POST" action="">
             {% csrf_token %}
             {% for menu in menus %}
                 <div class="row">
                     <div class="col-6" id="{{ menu.id }}">
                         {{ menu.name }}
                     </div>
-                    <div class="col-4">
+                    <div class="col-3">
                        £{{ menu.price }}
                     </div>
-                    <div class="col-2">
-                        <button class="btn btn-warning" type="submit"><i class="fas fa-plus"></i></button>
+                    <div class="col-3">
+                        <input class="btn btn-warning" type="submit" value="Add to Cart">
                     </div>
                 </div>
-                
                 <div class="col-3 col-sm-2 col-md-4 col-lg-3 col-xl-3">
                     <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="100" data-item_id="{{ menu.id }}" id="id_qty_{{ menu.id }}">
                 </div>
                 <hr>
+                <input type="hidden" name="redirect_url" value="{{ request.path }}">
             {% endfor %}
         </form>
     </div>
