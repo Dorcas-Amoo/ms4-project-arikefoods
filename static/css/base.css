@@ -30,6 +30,10 @@ section {
    margin-top: 1em;
 }
 
+.text-black {
+    color: #000;
+}
+
 .food-menu-button,
 .place-order-button,
 .checkout-button {
