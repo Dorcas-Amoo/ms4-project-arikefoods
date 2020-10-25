@@ -17,7 +17,9 @@
     </div>
     <div class="card-body">
         {% if cart_items %}
-            <div class="table-responsive"></div>
+            <div class="table-responsive">
+                {{ cart_items }}
+            </div>
         {% else %}
             <div class="panel-body"><span>There are no items in your cart.</span></div>
         {% endif %}

@@ -16,12 +16,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="#"> <i class="fas fa-hand-point-up"></i> Sign Up</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'contact_us' %}"> <i class="fas fa-phone"></i> Contact Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'view_order' %}"> <i class="fas fa-shopping-cart"></i> Cart</a>
-            </li>
             {% if user.is_authenticated %}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button"
@@ -39,6 +33,21 @@
                     <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-sign-in"></i>Login</a>
                     </li>
             {% endif %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact_us' %}"> <i class="fas fa-phone"></i> Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="{% if total %} font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_order' %}"> 
+                <i class="fas fa-shopping-cart"></i> Cart
+                 <p class="my-0 text-center">
+                    {% if total %}
+                        £{{ total|floatformat:2 }}
+                    {% else %}
+                        £0.00
+                    {% endif %}
+                </p>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
