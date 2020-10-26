@@ -23,3 +23,27 @@ def add_to_cart(request, item_id):
 
     request.session['order'] = cart
     return redirect(redirect_url)
+
+
+def update_cart(request, item_id):
+    """
+    Adjusts quantity of each menu in the cart.
+    (Influenced by Code Institute Boutique Ado tutorial)
+    """
+    redirect_url = request.POST.get('redirect_url')
+
+    if request.POST.get('quantity'):
+        quantity = int(request.POST.get('quantity'))
+        cart = request.session.get('order', {})
+        if quantity >= 0 and quantity <= 100:
+            if quantity > 0:
+                cart[item_id] = quantity
+            else:
+                cart.pop(item_id)
+
+            request.session['order'] = cart
+            return redirect(redirect_url)
+        else:
+            return redirect(redirect_url)
+    else:
+        return redirect(redirect_url)

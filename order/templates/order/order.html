@@ -36,7 +36,7 @@
                                 <p class="my-0">£{{ item.menu.price }}</p>
                             </td>
                             <td class="py-3 w-25">
-                                <form class="form" action="" method="POST">
+                                <form class="form" action="{% url 'update_cart' item.item_id %}" method="POST">
                                     {% csrf_token %}
                                     <div class="col-12">
                                         <input class="form-control qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="0" max="100" data-item_id="{{ item.menu.id }}" id="id_qty_{{ item.menu.id }}">
