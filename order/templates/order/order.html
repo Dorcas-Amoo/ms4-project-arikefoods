@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cart_tools %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -49,7 +50,7 @@
                                 </form>
                             </td>
                             <td class="py-3">
-                                <p class="my-0">£{{ item.menu.price }}</p>
+                                <p class="my-0">£{{ item.menu.price | calc_subtotal:item.quantity }}</p>
                             </td>
                         </tr>
                     {% endfor %}
