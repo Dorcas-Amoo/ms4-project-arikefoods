@@ -15,6 +15,7 @@ def view_order(request):
 def add_to_cart(request, item_id):
     """ A view to add items quantity to the order_cart """
 
+    menu = Menu.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('order', {})
@@ -23,7 +24,7 @@ def add_to_cart(request, item_id):
         cart[item_id] += quantity
     else:
         cart[item_id] = quantity
-        messages.success(request, f'{menu.name} to your cart')
+        messages.success(request, f'Added {menu.name} to your cart')
 
     request.session['order'] = cart
     return redirect(redirect_url)
