@@ -36,14 +36,16 @@ section {
 
 .food-menu-button,
 .place-order-button,
-.checkout-button {
+.checkout-button,
+.complete-button {
     background-color: #333;
 	color: #ebb129!important;
 }
 
 .food-menu-button:hover,
 .place-order-button:hover,
-.checkout-button:hover {
+.checkout-button:hover,
+.complete-button:hover {
 	background-color: #333;
 	color: #fff!important;
 }
