@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cart_tools %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <!-- To display ordered items and cart total-->
+    <div class="card checkout-card border-warning m-5">
+        <div class="card-header">
+            <h4><strong>Checkout</strong></h4>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless">
+                    <thead class="text-black text-center">
+                        <tr>
+                            <th scope="col">Menu Item</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Subtotal</th>
+                        </tr>
+                    </thead>
+                    {% for item in cart_items %}
+                        <tr class="text-black text-center">
+                            <td class="py-3">
+                                <p class="my-0">{{ item.menu.name }}</p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">{{ item.menu.price }}</p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">{{ item.quantity }}</p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">{{ item.menu.price | calc_subtotal:item.quantity }}</p>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+                <!-- To display Total to pay-->
+                <div class="row">
+                    <div class="col-12 d-block">
+                        <hr>
+                    </div>
+                    <div class="col-12 text-right">
+                        <h5><strong>Total to Pay: £{{ total|floatformat:2 }}</strong></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- checkout form -->
+        <div class="container">
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                    <legend class="m-5"><strong>Please fill out this form to complete your order</strong></legend>
+                {% csrf_token %}
+                <fieldset class="rounded px-3 m-5">
+                    <legend class="fieldset-label large text-black px-2 w-auto"><strong>Details</strong></legend>
+                    {{ order_form.full_name |as_crispy_field }}
+                </fieldset>
+                <fieldset class="rounded px-3 m-5">
+                    <legend class="fieldset-label large text-black px-2 w-auto"><strong>Delivery</strong></legend>
+                    {{ order_form.phone_number |as_crispy_field }}
+                    {{ order_form.street_address1 |as_crispy_field }}
+                    {{ order_form.street_address2 |as_crispy_field }}
+                    {{ order_form.town_or_city |as_crispy_field }}
+                    {{ order_form.county |as_crispy_field }}
+                    {{ order_form.postcode |as_crispy_field }}
+                    {{ order_form.country |as_crispy_field }}
+                    <div class="form-check form-check-inline float-right mr-0">
+                        {% if user.is_authenticated %}
+                            <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+                            <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+                        {% else %}
+                            <label class="form-check-label" for="id-save-info">
+                                <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
+                                <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                            </label>
+                        {% endif %}
+					</div>
+                </fieldset>
+                <fieldset>
+                    <!-- A Stripe card element will go here -->
+                    <legend class="m-5"><strong>Payment details</strong></legend>
+                    <div class="mb-3" id="card-element"></div>
+
+                    <!-- Used to display form errors -->
+                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                </fieldset>
+
+                <!-- complete order button -->
+                <button id="submit-button" class="btn complete-button btn-lg border-warning rounded-pill text-uppercase m-4">
+                    <span class="font-weight-bold">Complete Order</span>
+                    <span class="icon">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
