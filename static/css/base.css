@@ -37,7 +37,8 @@ section {
 .food-menu-button,
 .place-order-button,
 .checkout-button,
-.complete-button {
+.complete-button,
+.success-button {
     background-color: #333;
 	color: #ebb129!important;
 }
@@ -45,10 +46,17 @@ section {
 .food-menu-button:hover,
 .place-order-button:hover,
 .checkout-button:hover,
-.complete-button:hover {
+.complete-button:hover,
+.success-button:hover {
 	background-color: #333;
 	color: #fff!important;
 }
+
+.complete-button,
+.success-button {
+    position: relative;
+}
+
 
 .table {
    margin: 0 auto;
