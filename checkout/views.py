@@ -1,5 +1,9 @@
+"""Directly influenced by CI's Boutique Ado Tutorial and codewouter's."""
+
 from django.shortcuts import render, redirect, reverse
+
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 
 from .forms import OrderForm
 from .models import OrderLineItem
@@ -9,6 +13,7 @@ from order.contexts import cart_contents
 import stripe
 
 
+@login_required
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
