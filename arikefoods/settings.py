@@ -16,9 +16,13 @@ import os
 from os import environ
 from pathlib import Path
 
-
-if os.path.exists("envvar.py"):
+# SECURITY WARNING: don't run with debug turned on in production!
+if os.path.exists('envvar.py'):
     import envvar
+    # Override local to False here if you want to test things like 404, 500 error
+    DEBUG = True
+else:
+    DEBUG = False
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,8 +34,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
 ALLOWED_HOSTS = []
 
