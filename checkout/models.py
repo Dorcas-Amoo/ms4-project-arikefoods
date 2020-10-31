@@ -6,7 +6,6 @@ from menu.models import Menu
 
 class OrderDetails(models.Model):
     full_name = models.CharField(max_length=50, blank=False)
-    email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, blank=False)
     country = models.CharField(max_length=40, blank=False)
     postcode = models.CharField(max_length=20, blank=True)
@@ -15,8 +14,6 @@ class OrderDetails(models.Model):
     street_address2 = models.CharField(max_length=40, blank=False)
     county = models.CharField(max_length=40, blank=False)
     date = models.DateTimeField(auto_now_add=True)
-    order_total = models.DecimalField(max_digits=10, decimal_places=2,
-                                      null=False, default=0)
 
     def __str__(self):
         return "{0}-{1}".format(self.id, self.full_name)

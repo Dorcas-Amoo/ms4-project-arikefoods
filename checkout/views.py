@@ -38,7 +38,7 @@ def checkout(request):
             menu = Menu.objects.get(id=item_id)
 
             order_line_item = OrderLineItem(
-                order=order,
+                order_details=order,
                 menu=menu,
                 quantity=item_data,
             )
