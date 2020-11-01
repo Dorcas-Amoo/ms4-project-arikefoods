@@ -38,7 +38,8 @@ section {
 .place-order-button,
 .checkout-button,
 .complete-button,
-.success-button {
+.success-button,
+.cancel-button {
     background-color: #333;
 	color: #ebb129!important;
 }
@@ -47,16 +48,11 @@ section {
 .place-order-button:hover,
 .checkout-button:hover,
 .complete-button:hover,
-.success-button:hover {
+.success-button:hover,
+.cancel-button:hover {
 	background-color: #333;
 	color: #fff!important;
 }
-
-.complete-button,
-.success-button {
-    position: relative;
-}
-
 
 .table {
    margin: 0 auto;
