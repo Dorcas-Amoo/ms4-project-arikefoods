@@ -39,7 +39,8 @@ section {
 .checkout-button,
 .complete-button,
 .success-button,
-.cancel-button {
+.cancel-button,
+.my-button {
     background-color: #333;
 	color: #ebb129!important;
 }
@@ -49,7 +50,8 @@ section {
 .checkout-button:hover,
 .complete-button:hover,
 .success-button:hover,
-.cancel-button:hover {
+.cancel-button:hover,
+.my-button:hover {
 	background-color: #333;
 	color: #fff!important;
 }
