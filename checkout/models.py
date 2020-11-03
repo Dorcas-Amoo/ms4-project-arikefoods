@@ -5,6 +5,10 @@ from menu.models import Menu
 
 
 class OrderDetails(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'OrderDetails'
+
     full_name = models.CharField(max_length=50, blank=False)
     phone_number = models.CharField(max_length=20, blank=False)
     country = models.CharField(max_length=40, blank=False)
