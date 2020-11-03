@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import RecipePost
 
 # Create your views here.
 
@@ -6,4 +7,10 @@ from django.shortcuts import render
 def recipe_blog(request):
     """ A view to return the recipe blog page """
 
-    return render(request, 'recipe_blog/recipe.html')
+    posts = RecipePost.objects.all()
+
+    context = {
+        'posts': posts,
+    }
+
+    return render(request, 'recipe_blog/recipe.html', context)
