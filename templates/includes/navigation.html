@@ -1,4 +1,6 @@
 {% load static %}
+
+<!-- The Navigation bar links-->
 <nav class="navbar navbar-expand-lg navbar-light bg-warning mr-auto fixed-top">
     <a class="navbar-brand" href="{% url 'home' %}"><strong>Arike Foods</strong></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,6 +36,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'contact_us' %}"> <i class="fas fa-phone"></i> Contact Us</a>
             </li>
+            <!-- The Cart -->
             <li class="nav-item">
                 <a class="{% if total %} font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_order' %}"> 
                 <i class="fas fa-shopping-cart"></i> Cart

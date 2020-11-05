@@ -10,6 +10,8 @@
 {% endblock %}
 
 {% block content %}
+
+    <!-- Displays recipe blog posts -->
     <div class="card text-center border-warning m-5">
         <div class="row">
             <div class="col">
@@ -23,6 +25,9 @@
                     <hr>
                 {% endfor %}
                 <br>
+                <p> <i>Coming soon! Watch out for our cookbook site where you can have access to our full recipe blogs and create your own recipes.</i></p>
+                
+                <!-- Navigation button -->
                 <a href="{% url 'home' %}" class="btn my-button btn-lg border-warning rounded-pill text-uppercase m-4">
                     <span class="text-uppercase">Back to Home Page</span>
                 </a>

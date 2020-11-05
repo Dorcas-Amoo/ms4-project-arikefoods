@@ -34,6 +34,14 @@ section {
     color: #000;
 }
 
+.table {
+   margin: 0 auto;
+   font-size: 15px!important;
+   border-radius: 20px 20px;
+   color: #ebb129!important;
+}
+
+/* ------------------------------- The buttons (Credits: Bootstrap & https://www.qqlounge.com/)*/
 .food-menu-button,
 .place-order-button,
 .checkout-button,
@@ -56,12 +64,7 @@ section {
 	color: #fff!important;
 }
 
-.table {
-   margin: 0 auto;
-   font-size: 15px!important;
-   border-radius: 20px 20px;
-   color: #ebb129!important;
-}
+/* ------------------------------- The cards (Credits: Based on general research)*/
 
 .card {
     margin: 0 auto;
