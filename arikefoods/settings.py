@@ -11,14 +11,12 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 
-import sys
 import os
-from os import environ
 from pathlib import Path
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if os.path.exists('envvar.py'):
-    import envvar
+
     # Override local to False here if you want to test things like 404, 500 error
     DEBUG = True
 else:
@@ -89,7 +87,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
+                'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',

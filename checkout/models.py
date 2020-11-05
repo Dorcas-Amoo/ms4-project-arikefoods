@@ -1,7 +1,8 @@
 from django.db import models
 from menu.models import Menu
 
-""" Credits to Code Institute Boutique Ado Tutorial"""
+"""To store all order details - Credits to Code Institute Boutique Ado Tutorial
+"""
 
 
 class OrderDetails(models.Model):
@@ -21,6 +22,9 @@ class OrderDetails(models.Model):
 
     def __str__(self):
         return "{0}-{1}".format(self.id, self.full_name)
+
+
+""" To display and store Order Line Items in the database"""
 
 
 class OrderLineItem(models.Model):

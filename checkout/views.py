@@ -12,6 +12,7 @@ from order.contexts import cart_contents
 
 import stripe
 
+"""A view to handle checkout payment. Users are required to login for access"""
 
 @login_required
 def checkout(request):

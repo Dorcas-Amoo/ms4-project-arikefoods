@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-""" Coiled from CI's Boutique Ado project """
+""" Culled from CI's Boutique Ado project """
 
 
 class StripeWH_Handler:

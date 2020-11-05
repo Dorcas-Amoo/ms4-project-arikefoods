@@ -1,4 +1,4 @@
-"""Coiled directly from CI's Boutique Ado project and codewouter's."""
+"""Culled directly from CI's Boutique Ado project and codewouter's."""
 
 from django.conf import settings
 from django.http import HttpResponse
