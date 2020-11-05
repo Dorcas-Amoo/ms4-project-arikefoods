@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import RecipePost
 
+
 # Create your views here.
 
 
@@ -9,8 +10,9 @@ def recipe_blog(request):
 
     posts = RecipePost.objects.all()
 
+    template = 'recipe_blog/recipe.html'
     context = {
         'posts': posts,
     }
 
-    return render(request, 'recipe_blog/recipe.html', context)
+    return render(request, template, context)
