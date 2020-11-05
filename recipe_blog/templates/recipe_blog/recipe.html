@@ -14,21 +14,19 @@
         <div class="row">
             <div class="col">
                 {% for post in posts %}
-                    <strong> <h1> {{ post.menu }} </h1></strong>
+                    <br><strong> <h1> {{ post.menu }} </h1></strong>
                     <small> By: {{ post.author.first_name }} {{ post.author.last_name }}</small>
                     <br>
                     <br>
-                    {{ post.body }}
-                    <hr>
+                    {{ post.body|linebreaks }}
                     <br>
+                    <hr>
                 {% endfor %}
-
+                <br>
                 <a href="{% url 'home' %}" class="btn my-button btn-lg border-warning rounded-pill text-uppercase m-4">
                     <span class="text-uppercase">Back to Home Page</span>
                 </a>
             </div>
         </div>
     </div>
-
 {% endblock %}
-
