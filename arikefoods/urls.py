@@ -26,4 +26,5 @@ urlpatterns = [
     path('', include('order.urls')),
     path('checkout/', include('checkout.urls')),
     path('', include('recipe_blog.urls')),
+    path('feedback/', include('feedback.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

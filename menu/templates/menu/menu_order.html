@@ -40,6 +40,10 @@
                 <div class="col-3 col-sm-2 col-md-4 col-lg-3 col-xl-3">
                     <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="100" data-item_id="{{ menu.id }}" id="id_qty_{{ menu.id }}">
                 </div>
+                <br>
+                <div class="col-3 justify">
+                    <a href="{% url 'view_feedback' menu.id %}" class="btn btn-warning mb-2">Comment</a>
+                </div>
                 <hr>
                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
             </form>

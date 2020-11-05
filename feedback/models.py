@@ -8,7 +8,7 @@ class Feedback(models.Model):
     """
     This model stores comments
     """
-    menu = models.ForeignKey(Menu, related_name="comments", on_delete=models.SET_NULL, null=True, blank=True)
+    menu = models.ForeignKey(Menu, on_delete=models.SET_NULL, null=True, blank=True)
     name = models.CharField(max_length=254, blank=False, default='')
     comment = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
