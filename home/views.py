@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 
+""" Credits to CI's Boutique Ado Tutorial """
+
 
 def index(request):
     """ A view to return the index page """

@@ -11,11 +11,12 @@
 
 
 {% block content %}
-
+<!-- The Carousel -->
 <div class="container">
         {% include 'includes/carousel.html' %}
 </div>
 
+    <!-- The Welcome text and site introduction area -->
     <div class="container h-100">
         <div class="row h-100">
             <div class="col-md-12 my-auto">
@@ -33,6 +34,7 @@
                     We look forward to serving you.
                     <br>
                 </p>
+                <!-- The navigation buttons -->
                 <div class="my-5">
                     <h4 class="text-center">
                         <a href="{% url 'menu' %}" class="food-menu-button btn btn-lg rounded-pill border-warning text-uppercase py-3">Food Menu</a>
@@ -44,6 +46,7 @@
     </div>
 {% endblock %}
 
+<!-- JS code link to make the Carousel work -->
 {% block postloadjs %}
     <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 {% endblock %}

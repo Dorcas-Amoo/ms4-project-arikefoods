@@ -10,43 +10,42 @@
 {% endblock %}
 
 {% block content %}
-
-<div class="card border-warning w-50 my-3">
-    <div class="card-header">
-        <strong>Feedback on {{ menu }}</strong>
+    <!-- To allow users leave a comment. A user must be logged in to do so-->
+    <div class="card border-warning w-50 my-3">
+        <div class="card-header">
+            <strong>Feedback on {{ menu }}</strong>
+        </div>
+        <div class="card-body">
+            {% if user.is_authenticated %}
+                <form class="form" method="POST" action="{% url 'add_feedback' menu.id %}">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-12">
+                            <label class="my-2" for="user">Name</label>
+                        </div>
+                        <div class="col-12">
+                            <input id="user" name="user" type="text" class="w-75" placeholder="Enter your name" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="my-2" for="comment">Your Feedback</label>
+                        </div>
+                        <div class="col-12">
+                            <textarea id="review_text" name="review_text" type="text" class="w-100" placeholder="Leave a comment" required></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <input type="submit" class="btn btn-warning mt-1" value="Submit">
+                    
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                </form>
+                <hr>
+                {% else %}
+                    <h5 class="mt-3">You are yet to <a href="{% url 'account_login' %}" class="login-request-link">login.</a> Please login to give a feedback.</h5>
+            {% endif%}
+        </div> 
+        <!-- Navigation button back to order page -->
+        <a href="{% url 'menu_order' %}" class="btn my-button btn-lg border-warning rounded-pill text-uppercase m-4">
+            <span class="text-uppercase">Back</span>
+        </a>        
     </div>
-    <div class="card-body">
-        {% if user.is_authenticated %}
-            <form class="form" method="POST" action="{% url 'add_feedback' menu.id %}">
-                {% csrf_token %}
-                <div class="row">
-                    <div class="col-12">
-                        <label class="my-2" for="user">Name</label>
-                    </div>
-                    <div class="col-12">
-                        <input id="user" name="user" type="text" class="w-75" placeholder="Enter your name" required>
-                    </div>
-                    <div class="col-12">
-                        <label class="my-2" for="comment">Your Feedback</label>
-                    </div>
-                    <div class="col-12">
-                        <textarea id="review_text" name="review_text" type="text" class="w-100" placeholder="Leave a comment" required></textarea>
-                    </div>
-                </div>
-                <br>
-                <input type="submit" class="btn btn-warning mt-1" value="Submit">
-                
-                <input type="hidden" name="redirect_url" value="{{ request.path }}">
-            </form>
-            <hr>
-            {% else %}
-                <h5 class="mt-3">You are yet to <a href="{% url 'account_login' %}" class="login-request-link">login.</a> Please login to give a feedback.</h5>
-        {% endif%}
-    </div> 
-    <a href="{% url 'menu_order' %}" class="btn my-button btn-lg border-warning rounded-pill text-uppercase m-4">
-        <span class="text-uppercase">Back</span>
-    </a>        
-</div>
-
-
 {% endblock %}
