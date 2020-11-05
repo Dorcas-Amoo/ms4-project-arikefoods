@@ -27,6 +27,8 @@ def view_feedback(request, menu_id):
 def add_feedback(request, menu_id):
 
     menu = get_object_or_404(Menu, pk=menu_id)
+    print('menu_id={}'.format(str(menu_id)))
+    print(str(menu))
     feedback_list = Feedback.objects.all().filter(menu=menu)
     """
     This function is called when the comment button is clicked
@@ -36,11 +38,14 @@ def add_feedback(request, menu_id):
     if request.method == "POST":
         new_comment = FeedbackForm(request.POST)
         if new_comment.is_valid():
-            new_comment.instance.menu = menu
-            new_comment.instance.name = request.POST.get('name')
-            new_comment.instance.comment = request.POST.get('comment')
-            new_comment.save()
-
+            feedback = Feedback(
+                menu=menu,
+                name=request.POST.get('name'),
+                comment=request.POST.get('comment')
+            )
+            print(str(feedback))
+            feedback.save()
+            
             template = 'feedback/comments.html'
             context = {
                 'feedback_list': feedback_list,
@@ -48,6 +53,8 @@ def add_feedback(request, menu_id):
             }
 
             return render(request, template, context)
+        else:
+            print('invalid')
     else:
         new_comment = FeedbackForm()
 
