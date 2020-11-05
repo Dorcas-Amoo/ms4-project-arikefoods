@@ -3,6 +3,8 @@ from .models import Menu
 
 # Create your views here.
 
+""" Credits to CI's Boutique Ado Tutorial """
+
 
 def view_all_menus(request):
     """ A view to return the food menu page """

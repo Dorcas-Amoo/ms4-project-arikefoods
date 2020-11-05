@@ -1,6 +1,8 @@
 from django.shortcuts import get_object_or_404
 from menu.models import Menu
 
+""" Credits to CI's Boutique Ado Tutorial """
+
 
 def cart_contents(request):
 

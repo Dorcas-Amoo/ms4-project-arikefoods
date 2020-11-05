@@ -1,8 +1,9 @@
 from django.db import models
 
+""" Credits to CI's Boutique Ado Tutorial """
+
 
 class Category(models.Model):
-
 
     class Meta:
         verbose_name_plural = 'Categories'

@@ -11,12 +11,14 @@
 
 {% block content %}
 
+<!-- Navigation button back to food menu page -->
 <div class="my-5">
      <h4 class="text-center">
         <a href="{% url 'menu' %}" class="food-menu-button btn btn-lg rounded-pill border-warning text-uppercase py-3">See Food Menu</a>
     </h4>
 </div>
 
+<!-- Allows users to add menu items to cart for purchase -->
 <div class="card border-warning w-50 my-3">
     <div class="card-header">
         <strong>Order Your Meal</strong>
@@ -33,14 +35,17 @@
                     <div class="col-3">
                     £{{ menu.price }}
                     </div>
+                    <!-- Add to cart button -->
                     <div class="col-3">
                         <input class="btn btn-warning" type="submit" value="Add to Cart">
                     </div>
                 </div>
+                <!-- Allows for quantity selection -->
                 <div class="col-3 col-sm-2 col-md-4 col-lg-3 col-xl-3">
                     <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="100" data-item_id="{{ menu.id }}" id="id_qty_{{ menu.id }}">
                 </div>
                 <br>
+                <!-- Navigation button to feedback page -->
                 <div class="col-3 justify">
                     <a href="{% url 'view_feedback' menu.id %}" class="btn btn-warning mb-2">Comment</a>
                 </div>

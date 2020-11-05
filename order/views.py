@@ -5,6 +5,8 @@ from menu.models import Menu
 
 # Create your views here.
 
+""" Credits to CI's Boutique Ado Tutorial """
+
 
 def view_order(request):
     """ A view to return the order_cart page """

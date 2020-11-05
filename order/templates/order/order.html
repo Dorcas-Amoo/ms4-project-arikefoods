@@ -12,6 +12,7 @@
 
 {% block content %}
 
+ <!-- Displays the cart contents and indicates if there are no items in the cart-->
 <div class="card border-warning cart-card w-50 my-3">
     <div class="card-header">
         <h5><i class="fas fa-shopping-cart"></i> <strong>Your Order</strong></h5>
@@ -66,6 +67,7 @@
         {% endif %}
     </div>
 </div>
+ <!-- Navigation buttons back to order page and the checkout page-->
 <div class="my-5">
     <h4 class="text-center">
         <a href="{% url 'menu_order' %}" class="place-order-button btn btn-lg border-warning rounded-pill text-uppercase py-3">Back to Order</a>
