@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import RecipePost
 
+""" Credits to CI's Boutique Ado Tutorial """
 
 # Create your views here.
 

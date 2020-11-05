@@ -4,6 +4,8 @@ from menu.models import Menu
 
 # Create your models here.
 
+""" Credits to CI's Boutique Ado Tutorial """
+
 
 class RecipePost(models.Model):
     """
