@@ -27,11 +27,9 @@ def view_feedback(request, menu_id):
 def add_feedback(request, menu_id):
 
     menu = get_object_or_404(Menu, pk=menu_id)
-    print('menu_id={}'.format(str(menu_id)))
-    print(str(menu))
     feedback_list = Feedback.objects.all().filter(menu=menu)
     """
-    This function is called when the comment button is clicked
+    This function is called when the comment submit button is clicked
     Checks if form is valid and the comment is added to the database.
     """
 
@@ -43,9 +41,8 @@ def add_feedback(request, menu_id):
                 name=request.POST.get('name'),
                 comment=request.POST.get('comment')
             )
-            print(str(feedback))
             feedback.save()
-            
+
             template = 'feedback/comments.html'
             context = {
                 'feedback_list': feedback_list,
@@ -53,8 +50,6 @@ def add_feedback(request, menu_id):
             }
 
             return render(request, template, context)
-        else:
-            print('invalid')
     else:
         new_comment = FeedbackForm()
 
