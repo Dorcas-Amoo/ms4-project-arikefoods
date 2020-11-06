@@ -1,1 +1,1 @@
-web: gunicorn arike_foods.wsgi:application
+web: gunicorn arikefoods.wsgi:application
