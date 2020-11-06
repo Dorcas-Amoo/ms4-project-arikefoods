@@ -1,0 +1,18 @@
+[
+{
+    "model": "menu.category",
+    "pk": 1,
+    "fields": {
+        "name": "rice_dish",
+        "friendly_name": "Rice Dish"
+    }
+},
+{
+    "model": "menu.category",
+    "pk": 2,
+    "fields": {
+        "name": "soup",
+        "friendly_name": "Soup"
+    }
+}
+]

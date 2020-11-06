@@ -1,0 +1,82 @@
+[
+{
+    "model": "menu.menu",
+    "pk": 1,
+    "fields": {
+        "category": 1,
+        "name": "Jollof",
+        "description": "Jollof rice is a reddish one-pot rice dish popular in many West African countries.",
+        "price": "7.00"
+    }
+},
+{
+    "model": "menu.menu",
+    "pk": 2,
+    "fields": {
+        "category": 1,
+        "name": "Fried Rice",
+        "description": "African Fried Rice puts a spicy, flavorful spin on the traditional fried rice and is appealing on its own or served with a variety of other African foods.",
+        "price": "8.00"
+    }
+},
+{
+    "model": "menu.menu",
+    "pk": 3,
+    "fields": {
+        "category": 1,
+        "name": "White Rice",
+        "description": "Plain cooked rice",
+        "price": "5.00"
+    }
+},
+{
+    "model": "menu.menu",
+    "pk": 4,
+    "fields": {
+        "category": 1,
+        "name": "Rice & Peas",
+        "description": "An explosion of flavors Caribbean Rice and Red Beans seasoned with garlic, onions and creole spice infused with bay leaves, thyme, scotch bonnet, and coconut milk. It’s a rice meal like no other!",
+        "price": "10.00"
+    }
+},
+{
+    "model": "menu.menu",
+    "pk": 5,
+    "fields": {
+        "category": 2,
+        "name": "Efo",
+        "description": "Delicious stewed spinach made with fresh tomatoes, abanero peppers, onions, rapeseed oil, smoked salmon,  giant shrimp and more",
+        "price": "8.00"
+    }
+},
+{
+    "model": "menu.menu",
+    "pk": 6,
+    "fields": {
+        "category": 2,
+        "name": "Ayamase",
+        "description": "Our absolutely delicious signature Ofada stew made from big bell peppers, abanero peppers, onions, assorted meat, organic palm oil, boiled eggs and locust beans.",
+        "price": "10.00"
+    }
+},
+{
+    "model": "menu.menu",
+    "pk": 7,
+    "fields": {
+        "category": 2,
+        "name": "Meat Stew",
+        "description": "Stew made with assorted meat",
+        "price": "5.00"
+    }
+},
+{
+    "model": "menu.menu",
+    "pk": 8,
+    "fields": {
+        "category": 2,
+        "name": "Fish Stew",
+        "description": "Stew made with mackerel fish",
+        "price": "5.00"
+    }
+}
+]

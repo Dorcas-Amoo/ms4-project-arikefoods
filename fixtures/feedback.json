@@ -1,0 +1,32 @@
+[
+{
+    "model": "feedback.feedback",
+    "pk": 1,
+    "fields": {
+        "menu": 8,
+        "name": "Dorcas Amoo",
+        "comment": "admin test",
+        "date_added": "2020-11-06T02:41:31.080Z"
+    }
+},
+{
+    "model": "feedback.feedback",
+    "pk": 2,
+    "fields": {
+        "menu": 1,
+        "name": "Dorcas Amoo",
+        "comment": "Tring again",
+        "date_added": "2020-11-06T02:46:37.391Z"
+    }
+},
+{
+    "model": "feedback.feedback",
+    "pk": 3,
+    "fields": {
+        "menu": 1,
+        "name": "Seun Olomofe",
+        "comment": "Just trying the site",
+        "date_added": "2020-11-06T02:58:34.311Z"
+    }
+}
+]

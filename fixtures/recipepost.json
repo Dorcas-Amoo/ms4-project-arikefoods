@@ -1,0 +1,20 @@
+[
+{
+    "model": "recipe_blog.recipepost",
+    "pk": 1,
+    "fields": {
+        "menu": 1,
+        "author": 1,
+        "body": "INGREDIENTS:\r\n\r\n6 Cups Rice Long grain\r\n3/4 Cup Olive Oil\r\n5 Tbsp Tomato paste\r\n4 Cups Chicken stock\r\n1 Tbsp Curry Powder\r\n1 Tbsp Thyme\r\n4 cloves Garlic\r\n2 bay leaves\r\n1 Tbsp Ginger Grated\r\n1 Tsp Salt or to taste\r\n1 Onion Medium sized(sliced)\r\n1 Tomato sliced (Large size)\r\n1 Tbsp seasoning powder or seasoning cubes\r\n1 Onion Sliced\r\nWhite Pepper or black pepper to taste\r\n\r\nFor the sauce, blend together:\r\n3 Red Bell Pepper\r\n3 Tomatoes Plum\r\n2 Scotch bonnet\r\n1 Onion Diced\r\n\r\nINSTRUCTIONS:\r\n1. In a large pan, preheat the cooking Oil. Once the oil is hot, add the diced onions and fry for about 3 to 5 minutes or till the onions become soft.\r\n\r\n2. Add the Tomato Paste. Fry for about 5 minutes, then add the Garlic, Ginger and bay leaves and let it cook in the tomato paste for about 2 minutes.\r\n\r\n3. Add the blended pepper and allow the pepper to cook until the water is reduced entirely and the oil is seen floating on the fried pepper.\r\n\r\n4. Season with Thyme, Curry powder, salt to taste and seasoning Cubes. Leave to cook for another 2 to 5 minutes.\r\n\r\n5.Stir in the Rice until it is well coated with the sauce. Add the Chicken stock and cover it with a tight-fitting lid then allow it to come to a boil.\r\n\r\n6. Once it starts boiling - about 3 to 5 minutes after placing it on the stove, reduce the heat immediately to medium-low and steam until the rice is done.\r\n\r\n 7. Turn off the heat and add the sliced Tomato and Onions, and stir together briefly. Then, cover it up immediately so that the heat remaining in the Rice can steam up the vegetables a little bit.\r\n\r\n8. You can serve with Plantains, Chicken, Vegetables or as desired. ENJOY!"
+    }
+},
+{
+    "model": "recipe_blog.recipepost",
+    "pk": 2,
+    "fields": {
+        "menu": 4,
+        "author": 1,
+        "body": "INGREDIENTS:\r\n1 cup dried red kidney beans rinsed and drained\r\n6 1/2 cups low-sodium chicken stock\r\n2 cups uncooked parboiled rice, rinsed and drained\r\n1/4 cup grated Grace Pure Creamed Coconut\r\n3 fresh thyme sprigs\r\n1 habanero pepper\r\n1/2 tsp kosher salt\r\n1/4 tsp ground allspice\r\n\r\nINSTRUCTIONS:\r\nPut the beans and 4 cups of the stock in a medium dutch oven or saucepan and soak, covered, overnight.\r\nBring the beans and stock to a full boil and boil for 15 minutes. Reduce the heat to medium-low and simmer the beans until tender, about 1 hr.\r\nAdd the remaining 2 ½ cups sock and bring to a boil. Using a fork, stir in the rice, grated creamed coconut, thyme, habanero, salt and allspice and cover the pot with a tight-fitting lid. Reduce the heat to low and cook until the rice is tender, about 20 minutes. Turn off the heat and let stand, covered, for 5 minutes. Remove the thyme and habanero. Fluff the rice, separate the grains with a fork and serve."
+    }
+}
+]
