@@ -12,7 +12,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 
 import os
+from os import environ
 from pathlib import Path
+import dj_database_url
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if os.path.exists('envvar.py'):
@@ -130,12 +132,14 @@ WSGI_APPLICATION = 'arikefoods.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
+ }
+
 
 
 # Password validation
