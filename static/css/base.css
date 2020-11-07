@@ -72,6 +72,10 @@ section {
     flex-direction: column;
 }
 
+.order-card {
+    width: 80%;
+}
+
 #contact-card{
     padding-top: 90px;
 }
