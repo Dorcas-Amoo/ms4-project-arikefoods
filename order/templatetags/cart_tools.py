@@ -1,6 +1,7 @@
 from django import template
 
-""" The code below was generated from Code Institute's Boutique Ado Tutorial """
+""" The code below was generated from
+    Code Institute's Boutique Ado Tutorial """
 
 register = template.Library()
 

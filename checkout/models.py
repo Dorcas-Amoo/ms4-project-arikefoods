@@ -28,9 +28,13 @@ class OrderDetails(models.Model):
 
 
 class OrderLineItem(models.Model):
-    order_details = models.ForeignKey(OrderDetails, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
-    menu = models.ForeignKey(Menu, null=False, blank=False, on_delete=models.CASCADE)
+    order_details = models.ForeignKey(OrderDetails, null=False, blank=False,
+                                      on_delete=models.CASCADE,
+                                      related_name='lineitems')
+    menu = models.ForeignKey(Menu, null=False, blank=False,
+                             on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
 
     def __str__(self):
-        return "{0} {1} @ {2}".format(self.quantity, self.menu.name, self.menu.price)
+        return "{0} {1} @ {2}".format(self.quantity, self.menu.name,
+                                      self.menu.price)

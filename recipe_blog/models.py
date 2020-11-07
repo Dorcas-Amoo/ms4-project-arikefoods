@@ -11,7 +11,8 @@ class RecipePost(models.Model):
     """
     This model stores each blog post details
     """
-    menu = models.ForeignKey(Menu, null=False, blank=False, on_delete=models.CASCADE)
+    menu = models.ForeignKey(Menu, null=False, blank=False,
+                             on_delete=models.CASCADE)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     body = models.TextField()
 

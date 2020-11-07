@@ -12,14 +12,14 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 
 import os
-from os import environ
 from pathlib import Path
 import dj_database_url
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if os.path.exists('envvar.py'):
 
-    # Override local to False here if you want to test things like 404, 500 error
+    # Override local to False here if you want to test things like 404,
+    #  500 error
     DEBUG = True
 else:
     DEBUG = False
@@ -93,7 +93,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',  # required by allauth
+                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
@@ -153,6 +153,9 @@ else:
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
+
+# These lines will throw a 'too long' error in the validator
+# but can't be helped as checked with the tutors
 
 AUTH_PASSWORD_VALIDATORS = [
     {
