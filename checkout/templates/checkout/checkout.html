@@ -59,7 +59,7 @@
         <!-- checkout form -->
         <div class="container">
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
-                    <legend class="m-5"><strong>Please fill out this form to complete your order</strong></legend>
+                    <legend class="mx-3"><strong>Please fill out this form to complete your order</strong></legend>
                 {% csrf_token %}
                 <fieldset class="rounded px-3 m-5">
                     <legend class="fieldset-label large text-black px-2 w-auto"><strong>Details</strong></legend>
@@ -107,7 +107,7 @@
 
                 <!-- cancel order button -->
                 <h4>
-                    <a href="{% url 'home' %}" class="cancel-button btn btn-lg rounded-pill border-warning text-uppercase m-4">Cancel</a>
+                    <a href="{% url 'home' %}" class="cancel-button btn btn-lg rounded-pill border-warning text-uppercase m-4">Cancel Order</a>
                 </h4>
             </form>
         </div>
