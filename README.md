@@ -125,6 +125,7 @@ The requirement of this project is to build the site with relational database mo
 + A product admin were admin can add more items to the menu.
 + To give access to the feedback page only a user who have purchased a product and adding the comment button to the food menu page instead of the order page.
 + To ensure that when a user signs in, they are redirected to the page they were before signing in not to the homepage first.
++ Revisit site responsiveness.
   (This list is not exhaustive).
 
 
@@ -310,7 +311,7 @@ To deploy my site, I made use of the Heroku hosting platform following this proc
   
   NOTE: I later removed DISABLE_COLLECTSTATIC after setting up AWS BUCKET. This was set so that Heroku will not collect my static files (css, javascript and images).
 
-9. I then ensured set the DATABASE URL in settings.py to:
+9. I then ensured to set the DATABASE URL in settings.py to:
 
                                         ```
                                         if 'DATABASE_URL' in os.environ:
@@ -379,12 +380,12 @@ To run code **locally**:
                             ```
                             python3 manage.py collectstatic
                             ```
-  
+                              
 [Back To Table of Contents](#table-of-contents)
   
 
 ## Credits & References
-From my research, the following made an impact in the successful completion of this project as it had been extremely challenging yet enjoyable. I have also learnt a lot from completing the project. Please kindly see links below. Thank you.
+From my research, the following contributed positively and made an impact in the successful completion of this project as it had been extremely challenging yet productive and enjoyable. I have also learnt a lot from completing the project. Please kindly see links below. Thank you.
 
 ### Content
 
