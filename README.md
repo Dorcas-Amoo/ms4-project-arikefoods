@@ -13,7 +13,7 @@
 6. [Testing](#testing)
 7. [Bugs](#bugs)
 7. [Deployment](#deployment)
-8. [Credits & References](#credits-&-references)
+8. [Credits & References](#credits--references)
 
 
 ## Project Description
@@ -42,6 +42,8 @@ This project was created to meet the needs of a vast majority of people. Below a
   + 'View items in my shopping bag.'
   + 'Get a feedback on actions as I perform them.'
   
+In order to meet the requirements of the users, I began to brainstorm on what to do and how to go about it so as to deliver the desired result. I then visited similar sites online and those created by other code institute students which helped me to make an informed decision. After which I began creating the wireframe designs of my proposed website on Balsamiq [please see wireframe folder attached](https://github.com/Dorcas-Amoo/ms4-project-arikefoods). This helped me to really put a deeper thought into the idea, the layout, colour-scheme and many more and I am pleased with the result so far. Please note, the final product may not be an exact replica of the wireframes. Thank you.
+  
 
 ## Features
 1. **Home Page:** This contains the following:
@@ -53,6 +55,9 @@ This project was created to meet the needs of a vast majority of people. Below a
 2. **The Food Menu Page:** This contains the following:
   + The menu table which displays the menu details (Name, Description, Category and Price).
 3. **The Recipe_Blog Page:** This contains the following:
+4. **The Checkout Page:** 
+  
+  **NOTE: For the credit card payment functionality, please use 4242 4242 4242 4242 as credit card number. However, you can use any future date, security code and ZIP code.**
 
 
 ### Features to be Implemented
@@ -77,18 +82,19 @@ The following technologies were used to achieve the requirements of this project
 + [HTML5](https://en.wikipedia.org/wiki/HTML5)
   + HTML5 was used as the markup language to structure and present my website on the Web.
 + [Javascript](https://www.javascript.com/)
-  + This was used to achieve the interactive part of the site.
+  + This was used to achieve the interactive and Stripe payment part of the site.
 + [JQuery](https://www.jquery.com/)
-  + These scripts from the Materialize were used to initialise some features on my site.
+  + These scripts from Bootstrap and the Boutique Ado Tutorial were used to initialise some features on my site.
 
   
 ## Testing
-Over the course of building this project, I encountered a few challenging **bugs** which I was able to **fix** by asking relevant questions from the Tutors, my Mentor and carrying out extensive research. This made it paramount for me to adopt the *defensive* approach and habitually carry out testings as I build the site (I made use of the **developer tool**) so as to ensure things work properly, and in addition to this, I carried out the following:
+Over the course of building this project, I encountered a few challenging **bugs** which I was able to **fix** by asking relevant questions from the Tutors, my Mentor and carrying out extensive research. This made it paramount for me to adopt the *defensive* approach and habitually carry out print test and other testings as I build the site (I made use of the **developer tool**) so as to ensure things work properly, and in addition to this, I carried out the following:
 
 + **Responsiveness Testing**
 1. During construction, I regularly test the site against its *Responsiveness* by clicking on **Inspect** to view the *developer tool*.
 2. I then checked the layout by clicking on the **Ipad, the Iphone and selected other devices to view**.
-3. I also adjusted the pane to view the point at which the design changes to a mobile, tablet, laptop or desktop view.
+3. I also adjusted the pane to view the point at which the design changes to a mobile, tablet, laptop or desktop view
+4. This helped me to notice that some of the features were not well displayed in mobile view and prompted me implement some changes in the design.
 
 
 + **Page Testing**
@@ -172,9 +178,9 @@ I got inspiration for my project from the following:
 + [Code Institute](https://courses.codeinstitute.net/program/FullstackWebDeveloper)
 + [QQ Lounge](https://www.qqlounge.com/)
 
-Many thanks to my Mentor **Dick Vlaanderen** for his guidance and sacrifices despite the challenge of time difference. Also to my highly supportive husband, brother and friend who helped to test the usability and functionality of the project and gave valuable feedbacks to assist in improving the site.
+Many thanks to my Mentor **Dick Vlaanderen** for his guidance and sacrifices despite the challenge of time difference. Also to my **highly supportive and understanding husband**, my brother and friend who helped to test the usability and functionality of the project and gave valuable feedbacks to assist in improving the site.
 
-Also a huge THANK YOU to the Code Institute Team! The tutors, especially, Michael, Roman and Igor and to the Student care team for thier support. Special thanks to Neil Kavanagh, Lucy Rush and claire Lally.
+Also a huge THANK YOU to the Code Institute Team! The tutors, especially, **Michael, Roman, Igor, Scott and Sammy** and to the Student care team for thier support. Special thanks to **Neil Kavanagh, Lucy Rush and Claire Lally.**
 
 --------
 
