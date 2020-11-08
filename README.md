@@ -72,7 +72,7 @@ The requirement of this project is to build the site with relational database mo
   + The Navbar which displays the Logo (links to the homepage on click), the "Home", "Food Menu", "Sign Up", "My Account", and "Cart" links.
   + The menu table which displays the menu details (Name, Description, Category and Price).
   + The Navigation button to the Order page.
-3. **The Recipe_Blog Page (Based on additional Model 1)-** This contains the following:
+3. **The Recipe_Blog (Based on additional Model 1)-** This contains the following:
   + The Navbar which displays the Logo (links to the homepage on click), the "Home", "Food Menu", "Sign Up", "My Account", and "Cart" links.
   + The recipe with ingredients and instructions.
   + The Navigation button back to the Home page.
@@ -119,9 +119,11 @@ The requirement of this project is to build the site with relational database mo
 + A link to the Cookbook site where users can have access to more Recipes and get more involved with the ability to add their own recipes.
 + Allowing users to save their delivery addresses, payment cards and order details.
 + Viewing of Order history.
++ Addition of a delete button to order cart instead of making users set quantity to zero and update to remove an order.
++ In mobile view, to make items placed in the cart visible to the user not hidden in the navbar.
 + To send order confirmation via email.
 + A product admin were admin can add more items to the menu.
-+ To give access to the feedback page only a user who have purchased a product.
++ To give access to the feedback page only a user who have purchased a product and adding the comment button to the food menu page instead of the order page.
 + To ensure that when a user signs in, they are redirected to the page they were before signing in not to the homepage first.
   (This list is not exhaustive).
 
@@ -193,6 +195,7 @@ Implemented the folowing measures to prevent a user from making mistakes or carr
 2. Stripe's security system (Influenced by Code Institute's Boutique Ado project).
 3. Get_object_or_404 instances in the views.
 4. User authentication before accessing certain pages. e.g The Checkout Page.
+5. Tried accessing the admin portal with another user's account but was denied access.
 
 + **Responsiveness Testing**
 1. During construction, I regularly test the site against its *Responsiveness* by clicking on **Inspect** to view the *developer tool*.
@@ -245,9 +248,12 @@ To validate the user experience, I asked a number of my friends and family membe
      + "The site is beautiful and easy to use, a job well done!"
      + "I had a very pleasant and enjoyable experience"
      + "However, the background image clashes with the wordings on the homepage when it is scrolled" (My emphasis: This will be looked into and corrected in due course).
-     + "Maybe change the "Meat Stew" to say "Beef Stew".
+     + "Maybe change the "Meat Stew" to say "Beef Stew" instead.
+     + "Change Recipe blog page in the welcome address on the home page to Recipe blog"
+     + "It will be more beneficial to have a cancel button on the cart page than setting the quantity to zero"
      + "I was able to sign up successfully and got email verification" (This was confirmed from admin section).
      + "I tried paying but I got a message on the site that my card has not been charged and when I visited the link attched to the message, I used the test card and it worked".
+     + "Over and all, this site is beautiful and well thought through, well done!"
      
  + **Other Testings**
   + For my **HTML5 code testing**, I used [The W3C Markup Validation Service](https://validator.w3.org/)
@@ -262,43 +268,118 @@ To validate the user experience, I asked a number of my friends and family membe
 
 ## Bugs
 
-I encountered a number of time consuming bugs in the process which made the development process more challenging. However, with constant research and tutor support, I was able to overcome the majority of them.
+I encountered a number of time consuming bugs in the process which made the development process much more challenging. However, with constant research and tutor support, I was able to overcome the majority of them.
 
-I encountered a lot of  ```NoReverseMatch at //, Reverse for '' with arguments'(",)' not found ```. Encountering this eventually helped me to know more about solving such errors in django as I went researching and at ther times asked for help from the tutors.
+I encountered a lot of  ```NoReverseMatch at //, Reverse for '' with arguments'(",)' not found ```. Encountering this eventually helped me to know more about solving such errors in django as I went researching and at other times asked for help from the tutors.
 
-Heroku deployment was challenging but I realised I had mispelt my website name in settings.py and in gunicorn which after I made corrections, worked. However, I noticed my data were not being displayed which after asking for guidance, I was made to understand that I had to upload the data as it had not been successfully uploaded to Heroku.
+Heroku deployment was challenging but I realised I had mispelt my website address in settings.py and in gunicorn which worked after I made corrections. However, I noticed my data were not being displayed which after asking for guidance, I was made to understand that I had to upload the data as it had not been successfully uploaded to Heroku.
 
 I then faced a lot of challenges with uploading my data to Postgres and I had to manually add them with the guidance of tutor support.
 
 Finally, after uploading my files unto AWS S3, my Carousel images stopped working, however the alt attribute were being displayed. I later found that I had to change the URL path for it to work. Thanks to Igor from tutor support.
+
+I found out though the bug were time consuming and challenging, they really helped eventually and contributed to the learning process as I can now help others who may encounter such in the future.
 
 
 ## Deployment
 
 To deploy my site, I made use of the Heroku hosting platform following this process:
 
-1. Created a new app in Heroku
-2. In the settings tab, the following environment variables configuration were set in place:
+1. Logged on to Heroku as I already had an account from previous project.
+2. Created a new app in Heroku
+3. From the dashboard, under "Resourses", I chose Heroku Postgres and selected "Hobby Dev - Free" option from the pop up modal.
+4. A Postgres Database is then provisioned and automatically added a ```DATABASE_URL``` Config var.
+5. In the Settings tab, I clicked Reveal Config Vars and copied the DATABASE_URL value into settings.py in my IDE (Gitpod).
+6. In Gitpod, I installed dj\_database\_url and psycopg2-binary and ran  pip3  freeze > requirements.txt in the terminal.
+7. In settings.py, I imported dj\_database\_url.
+8. In Heroku, under the Settings tab, and then under Reveal Config Vars, I ensured to set the following for my newly created app.
+
+                                        |           Key           |    Value     |
+                                        |:-----------------------:|:------------:|
+                                        | STRIPE_PUBLIC_KEY       | < my value > |
+                                        | STRIPE_SECRET_KEY       | < my value > |
+                                        | STRIPE_WH_SECRET        | < my value > |
+                                        | SECRET_KEY              | < my value > |
+                                        | AWS_ACCESS_KEY_ID       | < my value > |
+                                        | AWS_SECRET_ACCESS_KEY   | < my value > |
+                                        | EMAIL_HOST_USER         | < my value > |
+                                        | EMAIL_HOST_PASS         | < my value > |
+                                        | DATABASE_URL            | < my value > |
+                                        | USE_AWS                 |   < True >   |
+                                        | DISABLE_COLLECTSTATIC   | 1            |
   
-  - SECRET_KEY = "My secret key"
-  - 
-3. From the heroku dashboard of my application, I clicked on "Deploy" > "Deployment method" and selected GitHub.
-4. I connected to my GitHub repository.
-5. I then set the project up for automatic deployment which helped to deploy easily whenever the master branch is updated through pushing to Github.
-6. To do this manually, in the deployment section, select the master branch and click 'Deploy Branch".
-7. The site should then be successfully deployed.
+  NOTE: I later removed DISABLE_COLLECTSTATIC after setting up AWS BUCKET. This was set so that Heroku will not collect my static files (css, javascript and images).
+
+9. I then ensured set the DATABASE URL in settings.py to:
+
+                                        ```
+                                        if 'DATABASE_URL' in os.environ:
+                                        DATABASES = {
+                                            'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+                                        }
+                                        else:
+                                        DATABASES = {
+                                            'default': {
+                                                'ENGINE': 'django.db.backends.sqlite3',
+                                                'NAME': BASE_DIR / 'db.sqlite3',
+                                            }
+                                        }
+                                        ```
+
+10. As this is a new database, I ran migration again with `python3 manage.py migrate` to build the Postgres database.
+11. I then created a new superuser with `python3 manage.py createsuperuser`
+12. In settings.py, the DEBUG value is set dependent on the environment variable DEVELOPMENT. Heroku does not have this key, so it automatically reverts to false.
+
+                                        ```
+                                        if 'DEVELOPMENT' in os.environ:
+                                            DEBUG = True
+                                        else:
+                                            DEBUG = False
+                                        ```
+13. Make sure to preload products and tags by running the following commands from your IDE's terminal: (I did not follow this process and it cost me time as I had to later           manually upload my data to Postgres which was a very tedious process).
+                                          
+                                          ```
+                                          python3 manage.py loaddata menu.json
+                                          ```
+
+14. I Installed gunicorn with `pip3 install gunicorn`
+                                          
+15. I created a Procfile:
+
+                                        ```
+                                        echo web: gunicorn arikefoods.wsgi:application > Procfile
+                                        ```
+                                        
+16. Once packages have been updated, I also updated the requirements.txt file by running the following command:
+
+                                        ```
+                                        pip3 freeze > requirements.txt
+                                        ```
+
+17. Finally committed my changes and pushed to Github and then to Heroku.
+18. From the heroku dashboard of my application, I clicked on "Deploy" > "Deployment method" and selected GitHub.
+19. I connected to my GitHub repository.
+20. I then set the project up for automatic deployment which helped to deploy easily whenever the master branch is updated through pushing to Github.
+21. To do this manually, in the deployment section, select the master branch and click 'Deploy Branch".
+22. The site should then be successfully deployed.
+23. Once deployed, you can then click on the open app tab on the top right to launch your site or click on more, restart all dynos and then open app.
   
 To run code **locally**:
 1. From [GitHub](https://github.com/), click on the "Clone" button.
 2. Choose "Download Zip" (The download starts).
 3. After the download is complete, open the zip folder by double clicking to access created page.
-4. The page will launch on your chosen browser.
-NOTE: Ensure that you have ..... downloaded on your device else this will not work. Also, install the following:
-  + `pip install -r requirements.txt`.
-  + For any newly added packages to the project, use `pip freeze --local > requirements.txt ` this will update the requirements.txt file with new dependencies.
-  + Also ensure that a Procfile is installed for it to run on Heroku.
+4. Set up a virtual environment if you have not already done so.
+5. Activate your virtual environment, please see the Python Documentation on [virtual environments](https://docs.python.org/3/library/venv.html) for further instructions.
+6. Install any required module and freeze them into requirements.txt.
+7. Create a new file env.py at the base directory. 
+8. Copy all your secret keys from settings.py and paste into env.py file.
+9. Then complete the process by running migration, createsuperuser, preload products and tags, then runserver.
+10. Finally, ensure to run the following command whenever changes are made to static files.
+                            
+                            ```
+                            python3 manage.py collectstatic
+                            ```
   
-
 [Back To Table of Contents](#table-of-contents)
   
 
