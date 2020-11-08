@@ -390,13 +390,23 @@ From my research, the following made an impact in the successful completion of t
 
 **Tutorials and Other useful resources**
 + [Code Institute for HTML, CSS, JavaScript & UX](https://courses.codeinstitute.net/program/FullstackWebDeveloper)
++ [Django Models](https://docs.djangoproject.com/en/3.1/topics/db/models/)
 + [Challenger](https://github.com/maliahavlicek/ms4_challenger)
 + [The Woodworks](https://github.com/codewouter/milestone4-the-woodworks)
++ [Recipes](https://cheflolaskitchen.com/)
++ [Kevin](https://www.youtube.com/watch?v=yc2olxLgKLk)
++ [Learning Django in 30 mins](https://www.youtube.com/watch?v=IMG4r03G6g8)
++ [The Font by Google Fonts](https://fonts.google.com/?query=open+sans)
++ [Custom Styling](https://css-tricks.com/)
++ [Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines)
 
 ### Media
 The images and recipes used, and my *Wireframes* were from the following:
 + [Balsamiq](https://balsamiq.com/)
 + [QQ Lounge](https://www.qqlounge.com/)
++ [Carousel Image - Ayamase](https://2.bp.blogspot.com/-m2_U5ECwLIA/VCT7YYJZezI/AAAAAAAAGWg/HfqMrMlFLpg/s1600/ayamase%2Bofada%2Bstew.jpg)
++ [Carousel Image - Jollof](https://food-images.files.bbci.co.uk/food/recipes/jollof_rice_with_fried_84889_16x9.jpg)
++ [Site Background image](https://pixabay.com/images/search/marble%20wallpaper/)
 
 ### Acknowledgements
 I got inspiration for my project from the following:
