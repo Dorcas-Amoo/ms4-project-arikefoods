@@ -28,21 +28,34 @@ Thank you and enjoy the ride. :rocket:
 
 ## UX
 
-This project was created to meet the needs of a vast majority of people. Below are a some _User Stories_:
+This project was created to meet the needs of the everyday people. Below are some _User Stories_:
 
 * As a potential user and customer on visiting your site, I want to be able to do the following:
   + 'Register easily.'
-  + 'Once registered to receive and email confirmation.'
-  + 'Easily login and logout as desired.'
-  + 'View a list of available meal for purchase.'
+  + 'Once registered to receive an email confirmation.'
+  + 'Securely and easily login and logout as desired.'
+  + 'View a list of available meals for purchase.'
+  + 'See images of some meals available for sale.'
+  + 'Have a smooth user experience by easily understanding how to navigate through and use the site.'
+  + 'Have a full understanding of the items available for purchase.
   + 'Have access to the price list of items.'
   + 'Easily select one or more items for purchase.'
-  + 'Be able to control or edit the quantity of item I'd like to purchase.'
-  + 'Leave a review on a meal wherever possible.'
   + 'View items in my shopping bag.'
-  + 'Get a feedback on actions as I perform them.'
+  + 'See a summary of my purchase before checkout so as to allow for making an informed decision before purchase.'
+  + 'Be able to control or edit the quantity of items I'd like to purchase.'
+  + 'Get a feedback on actions as I perform them where possible.'
+  + 'Make a secure payment for items I want to purchase.'
+  + 'Be sure my purchase has been successful.'
+  + 'Leave a review on any given meal wherever possible.'
+  + 'Have access to additional features like a blog post on your menu.'
+  + 'Have access to some contact details.'
   
-In order to meet the requirements of the users, I began to brainstorm on what to do and how to go about it so as to deliver the desired result. I then visited similar sites online and those created by other code institute students which helped me to make an informed decision. After which I began creating the wireframe designs of my proposed website on Balsamiq [please see wireframe folder attached](https://github.com/Dorcas-Amoo/ms4-project-arikefoods). This helped me to really put a deeper thought into the idea, the layout, colour-scheme and many more and I am pleased with the result so far. Please note, the final product may not be an exact replica of the wireframes. Thank you.
+In order to meet the requirements of the user, I began brainstorming on what to do and how to go about delivering the desired result. I decided to visit related websites, and those created by other code institute students which helped me to make an informed decision. After this, I began creating the wireframe designs of my proposed website on Balsamiq, please see [wireframes folder attached](https://github.com/Dorcas-Amoo/ms4-project-arikefoods). This helped me to really put a deeper thought into the idea, the layout, colour-scheme and many more features to be implemented. Though I am pleased with the result so far, due to the time constraint, I have had to postpone some of the features I had in mind and will be implementing them in the future. 
+
+Please kindly note that the final product may not be an exact replica of the wireframes. Thank you.
+
+
+[Back To Table of Contents](#table-of-contents)
   
 
 ## Features
@@ -53,26 +66,72 @@ In order to meet the requirements of the users, I began to brainstorm on what to
   + The Navigation button to access Food Menu and Menu Order pages.
   + The Footer which displays the copyright content.
 2. **The Food Menu Page:** This contains the following:
+  + The Navbar which displays the Logo (links to the homepage on click), the "Home", "Food Menu", "Sign Up", "My Account", and "Cart" links.
   + The menu table which displays the menu details (Name, Description, Category and Price).
+  + The Navigation button to the Order page.
 3. **The Recipe_Blog Page:** This contains the following:
-4. **The Checkout Page:** 
+  + The Navbar which displays the Logo (links to the homepage on click), the "Home", "Food Menu", "Sign Up", "My Account", and "Cart" links.
+  + The recipe with ingredients and instructions.
+  + The Navigation button back to the Home page.
+4. **The Menu Order Page:** This contains the following:
+  + The Navbar which displays the Logo (links to the homepage on click), the "Home", "Food Menu", "Sign Up", "My Account", and "Cart" links.
+  + The Order form which has the add to cart button and quantity selection features.
+  + A 'Comment' navigation button to the feedback page
+  + The Navigation button back to the Food Menu page.
+5. **The Order(Cart) Page:** This contains the following:
+  + The Navbar which displays the Logo (links to the homepage on click), the "Home", "Food Menu", "Sign Up", "My Account", and "Cart" links.
+  + A Navigation button to the Checkout and Payment page.
+  + The Navigation button back to the Order page.
+6. **The Checkout and Payment Page:** This contains the following:
+  + The Navbar which displays the Logo (links to the homepage on click), the "Home", "Food Menu", "Sign Up", "My Account", and "Cart" links.
+  + The Order summary and the payment form which consists of the user details and payment card details.
+  + A Secure Complete Order button that saves the payment and triggers the Success page once payment is successfully processed otherwise, an error message appears to inform the     user that their card has not been charged.
+  + A Navigation button back to the home page which also serves as a cancel order button.
+  + Users have to be logged in to access this page.
+7. **The Order Success Page:** This contains the following:
+  + The Navbar which displays the Logo (links to the homepage on click), the "Home", "Food Menu", "Sign Up", "My Account", and "Cart" links.
+  + A paragraph of message indicating that the payment has been successful.
+  + A Navigation button back to the home page
+8. **The Feedback Page:** This contains the following:
+  + The Navbar which displays the Logo (links to the homepage on click), the "Home", "Food Menu", "Sign Up", "My Account", and "Cart" links.
+  + The comment form which consists of the user's name and a submit button.
+  + Users have to be logged in to access this page.
+9. **The Sign Up Page:** This contains the following:
+  + The Navbar which displays the Logo (links to the homepage on click), the "Home", "Food Menu", "Sign Up", "My Account", and "Cart" links.
+  + The registration form which consists of the user's email, username, password, password confirmation and a submit button.
+  + Email Confirmation is sent after form submission.
+10. **The Sign In Page:** This contains the following:
+  + The Navbar which displays the Logo (links to the homepage on click), the "Home", "Food Menu", "Sign Up", "My Account", and "Cart" links.
+  + The login form which consists of the user's email, username, password, forgot password and a submit button.
   
-  **NOTE: For the credit card payment functionality, please use 4242 4242 4242 4242 as credit card number. However, you can use any future date, security code and ZIP code.**
-
+  **Other Pages:** These consists of all other allauth functionalities like email confirmation, password reset etc.
+  
+  **PLEASE NOTE: For the credit card payment functionality, use 4242 4242 4242 4242 as your credit card number. However, you can use any futuristic date, security code and ZIP code.**
 
 ### Features to be Implemented
 + The User Profile page.
-+ Enable user to update their profiles.
-+ Add a subscription feature where users can have access to more benefits of being a member.
-+ A link to the Cookbook site where users can have access to more Recipes and have the ability to add their own.
++ Enable users to edit and update their profiles.
++ Add a subscription feature where users can have access to more benefits of being registered.
++ A link to the Cookbook site where users can have access to more Recipes and get more involved with the ability to add their own recipes.
++ Allowing users to save their delivery addresses, payment cards and order details.
++ Viewing of Order history.
+  (This list is not exhaustive).
+
+
+[Back To Table of Contents](#table-of-contents)
+
 
 ## Technologies Used
 The following technologies were used to achieve the requirements of this project:
 
++ [Django](https://docs.djangoproject.com/en/3.0/) HTML templating, URL routing, Form validation, Authentication, Admin and Security.
+   + A lot of the heavy lifting for achieving the website at a short space of time was done with this.
 + [Python](https://www.python.org/)
   + I used this as the backend language to help manipulate data.
 + [Heroku](https://www.heroku.com/)
   + This was used to host my website.
++ [Heroku's PostgreSQL database](https://data.heroku.com/datastores/f3ba8873-adda-49a5-bf37-ea9ddde11767/)
+  + This was used to host database on cloud.
 + [Github](https://github.com/)
   + This was used as the project repository. 
 + [Gitpod](https://www.gitpod.io/) 
@@ -85,6 +144,32 @@ The following technologies were used to achieve the requirements of this project
   + This was used to achieve the interactive and Stripe payment part of the site.
 + [JQuery](https://www.jquery.com/)
   + These scripts from Bootstrap and the Boutique Ado Tutorial were used to initialise some features on my site.
++ [Markdown](https://www.markdownguide.org/) 
+  + This was used to document the readme.
+ 
+ **Other Frameworks Used**
+ 
++ [Dj-database-url](https://pypi.org/project/dj-database-url/)
+  + Allows use of environment variable for database connections.
++ [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) 
+  + A mobile friendly CSS framework based on a responsive grid system. Provides out of the box UI    components such as navigation menu bar, carousels, forms and cards. 
++ [Django-crispy-forms](https://pypi.org/project/django-crispy-forms/)
+  + Allows style and HTML control of Django template form displays.
++ [Stripe](https://pypi.org/project/stripe/)
+  + A python library to talk to Stripe's API.
++ [Boto3](https://pypi.org/project/boto3/)
+  + Allows Python to talk to AWS SDK so you can store data in S3 buckets .
++ [Django-storages] 
+  + A collection of custom storage backends with django to work with boto3 and AWS S3.
++ [Gunicorn](https://pypi.org/project/gunicorn/)
+  + Python WSGI HTTP Server for UNIX so you can host your application
++ [Psycopg2](https://www.psycopg.org/docs/)
+  + PostgreSQL database adapter for the Python
++ [Pytz](https://pypi.org/project/pytz/)
+  + World timezone calculations
+ 
+
+[Back To Table of Contents](#table-of-contents)
 
   
 ## Testing
@@ -97,7 +182,7 @@ Over the course of building this project, I encountered a few challenging **bugs
 4. This helped me to notice that some of the features were not well displayed in mobile view and prompted me implement some changes in the design.
 
 
-+ **Page Testing**
++ **Pages Testing**
 I carried out the following tests on these devices (Mobile, tablet, laptop):
    + Once the site loads, all contents were displayed as expected.
    + I clicked on all links in the Navigation and side bars which opens the required page successfully.
@@ -117,7 +202,7 @@ I carried out the following tests on these devices (Mobile, tablet, laptop):
    1. They were to try using all the links to test its functionality and usability.
  
    2. They all came back with different feedbacks as follows:
-     + "Whao Whao, beautiful, a job well done!"
+     + "The site is beautiful and easy to use, a job well done!"
      + 
      
  + **Other Testings**
@@ -126,6 +211,10 @@ I carried out the following tests on these devices (Mobile, tablet, laptop):
   + For my **Javascript and JQuery code testing**, I used [JSHint](https://jshint.com/)
   + For my **Python code testing**, I used [PEP8](http://pep8online.com/)
   + For **Browsers testing**, I did not have any issues opening or viewing the site on the different browsers that was used namely: **Microsoft Edge**, **Mozilla Firefox**, **Google Chrome**, **Safari** and other different mobile browsers, namely, **Android** and **iOS.** On all of these platforms, I had a smooth user-friendly experience.
+  
+
+[Back To Table of Contents](#table-of-contents)
+
 
 ## Bugs
 
@@ -158,6 +247,9 @@ NOTE: Ensure that you have ..... downloaded on your device else this will not wo
   + Also ensure that a Procfile is installed for it to run on Heroku.
   
 
+[Back To Table of Contents](#table-of-contents)
+  
+
 ## Credits & References
 From my research, the following made an impact in the successful completion of this project as it had been extremely challenging yet enjoyable. I have also learnt a lot from completing the project. Please kindly see links below. Thank you.
 
@@ -178,9 +270,9 @@ I got inspiration for my project from the following:
 + [Code Institute](https://courses.codeinstitute.net/program/FullstackWebDeveloper)
 + [QQ Lounge](https://www.qqlounge.com/)
 
-Many thanks to my Mentor **Dick Vlaanderen** for his guidance and sacrifices despite the challenge of time difference. Also to my **highly supportive and understanding husband**, my brother and friend who helped to test the usability and functionality of the project and gave valuable feedbacks to assist in improving the site.
+My gratitude goes first to God Almighty for the gift of life, love and strength to see this to the end. Many thanks to my **highly supportive and understanding husband, Oluwaseun Olomofe** and to my Mentor **Dick Vlaanderen** for his guidance and sacrifices despite the challenge of time difference. Also to my brother, **Leke Amoo** and everyone else who helped to test the usability and functionality of the project and gave valuable feedbacks to assist in improving the site.
 
-Also a huge THANK YOU to the Code Institute Team! The tutors, especially, **Michael, Roman, Igor, Scott and Sammy** and to the Student care team for thier support. Special thanks to **Neil Kavanagh, Lucy Rush and Claire Lally.**
+Also a huge THANK YOU to the Code Institute Team! The tutors, especially, **Michael, Roman, Igor, Scott and Sammy** for their guidance and patience and to the Student care team for their exceptional support since I started the course. Special thanks to **Neil Kavanagh, Lucy Rush and Claire Lally.**
 
 --------
 
