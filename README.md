@@ -188,7 +188,7 @@ The following technologies were used to achieve the requirements of this project
 
   
 ## Testing
-Over the course of building this project, I encountered a few challenging **bugs** which I was able to **fix** by asking relevant questions from the Tutors, my Mentor and carrying out extensive research. This made it paramount for me to adopt the *defensive* approach and habitually carry out print test and other testings as I build the site (I made use of the **developer tool**) so as to ensure things work properly, and in addition to this, I carried out the following:
+Over the course of building this project, I encountered a few challenging **bugs** which I was able to **fix** by asking relevant questions from the Tutors, my Mentor and carrying out extensive research. This made it paramount for me to adopt the *defensive* approach and habitually carry out print test and other testings as I build the site (I made use of the Google **developer tool** and Lighthouse to check for it's usability.) so as to ensure things work properly, and in addition to this, I carried out the following:
 
 + **Defensive Design Testing**
 Implemented the folowing measures to prevent a user from making mistakes or carrying out malicious actions.
@@ -223,6 +223,9 @@ I carried out the following tests for all pages on these devices (Mobile, tablet
    + The correct items are being added to cart once selected.
    + The success messages pops up as expected.
    + A payment intent is created in Stripe correctly and displays the total price.
+   
+      ![Payment Proof](media/stripe_payment_intent.jpg)
+      
    + Error message during card decline was correctly displayed.
    + The blog post was displayed as expected.
    + All menu were correctly displayed as stored in the database.
@@ -380,6 +383,8 @@ To run code **locally**:
                             ```
                             python3 manage.py collectstatic
                             ```
+ 
+ *PLEASE NOTE: I was unable to carryout this process for my site as I realised uploading to AWS and Postgres should have been done after this. This is another key lesson learnt from this project.*                             
                               
 [Back To Table of Contents](#table-of-contents)
   
